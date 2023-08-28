@@ -34,7 +34,7 @@ jobs:
       run: echo "test" > test.txt
 
     - name: SharePoint uploader
-      uses: su-dont/share-point-uploader@v2.1
+      uses: obrassard/action-sharepoint-publish@v1.1.1
       with:
           site_url: https://fintuple.sharepoint.com/:f:/r/sites/ClientEngagementICICI
           library_folder: /External/Custody Digitalisation/Release Mgmt/Build/Frontend/test
