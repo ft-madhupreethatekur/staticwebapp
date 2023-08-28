@@ -34,9 +34,10 @@ jobs:
       run: echo "test" > test.txt
 
     - name: SharePoint uploader
-      uses: obrassard/action-sharepoint-publish@v1.1.1
+      uses: justinmclawhorn/spo-file-upload@v1
       with:
           site_url: https://fintuple.sharepoint.com/:f:/r/sites/ClientEngagementICICI
-          library_folder: /External/Custody Digitalisation/Release Mgmt/Build/Frontend/test
-          sharepoint_client_id: ${{ secrets.CLIENTID }}
-          sharepoint_client_secret: ${{ secrets.CLIENTSECRET }}
+          destination_path: /External/Custody Digitalisation/Release Mgmt/Build/Frontend/test
+          source_path: test.txt
+          username: madhupreetha.tekur@fintuple.com
+          password: ${{ secrets.PASSWORD }}
