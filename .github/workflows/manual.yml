@@ -36,9 +36,7 @@ jobs:
     - name: SharePoint uploader
       uses: su-dont/share-point-uploader@v2.1
       with:
-          sp_url: https://fintuple.sharepoint.com/:f:/r/sites/ClientEngagementICICI
-          sp_username: madhupreetha.tekur@fintuple.com
-          sp_password: ${{ secrets.PASSWORD }}
-          sp_folder: /External/Custody Digitalisation/Release Mgmt/Build/Frontend/test
-          sp_file_name: share_point_text.txt
-          file: test.txt
+          site_url: https://fintuple.sharepoint.com/:f:/r/sites/ClientEngagementICICI
+          library_folder: /External/Custody Digitalisation/Release Mgmt/Build/Frontend/test
+          sharepoint_client_id: ${{ secrets.CLIENTID }}
+          sharepoint_client_secret: ${{ secrets.CLIENTSECRET }}
