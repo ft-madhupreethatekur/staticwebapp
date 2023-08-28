@@ -34,10 +34,12 @@ jobs:
       run: echo "test" > test.txt
 
     - name: SharePoint uploader
-      uses: justinmclawhorn/spo-file-upload@v1
+      uses: sjultra/Push2Sharepoint@v3.4
       with:
-          site_url: https://fintuple.sharepoint.com/:f:/r/sites/ClientEngagementICICI
-          destination_path: /External/Custody Digitalisation/Release Mgmt/Build/Frontend/test
-          source_path: test.txt
           username: madhupreetha.tekur@fintuple.com
           password: ${{ secrets.PASSWORD }}
+          file_name: test.txt
+          full_url: 'https://fintuple.sharepoint.com/:f:/r/sites/ClientEngagementICICI'
+          target_subfolder: 'External/Custody Digitalisation/Release Mgmt/Build/Frontend/test'
+          
+          
